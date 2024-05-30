@@ -12,12 +12,6 @@ This Flutter application allows teachers to manage students' data using Firebase
 - **Navigation**: A bottom navigation bar allows easy switching between data entry and data view pages.
 - **Sign Out**: Users can sign out of the app.
 
-## Screenshots
-![Signup Screen](screenshots/signup.png)
-![Login Screen](screenshots/login.png)
-![Email Verification](screenshots/email_verification.png)
-![Add Student](screenshots/add_student.png)
-![Student List](screenshots/student_list.png)
 
 ## Installation and Setup
 ### Prerequisites
