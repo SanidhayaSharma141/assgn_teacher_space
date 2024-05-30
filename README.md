@@ -1,16 +1,26 @@
-# teacher_space
+# Teacher-Student Management App
 
-A new Flutter project.
+## Overview
+This Flutter application allows teachers to manage students' data using Firebase for authentication and Cloud Firestore for data storage. The app provides features for user registration, email verification, student data entry, and real-time data updates. The app uses Bloc for state management, ensuring a smooth and responsive user experience.
 
-## Getting Started
+## Features
+- **User Authentication**: Users can sign up and log in using their email and password. Email verification is required.
+- **Teacher Account**: Teachers can store multiple students' data in Cloud Firestore.
+- **Data Management**: Teachers can add, view, and optionally update student data including name, date of birth, and gender.
+- **Real-Time Updates**: Student data is updated in real-time and displayed on the UI.
+- **State Management**: The app uses Bloc for efficient state management.
+- **Navigation**: A bottom navigation bar allows easy switching between data entry and data view pages.
+- **Sign Out**: Users can sign out of the app.
 
-This project is a starting point for a Flutter application.
+## Screenshots
+![Signup Screen](screenshots/signup.png)
+![Login Screen](screenshots/login.png)
+![Email Verification](screenshots/email_verification.png)
+![Add Student](screenshots/add_student.png)
+![Student List](screenshots/student_list.png)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation and Setup
+### Prerequisites
+- Flutter SDK
+- Firebase Project
+- Code Editor (VS Code, Android Studio, etc.)
