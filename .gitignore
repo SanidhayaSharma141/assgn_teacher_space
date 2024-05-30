@@ -33,6 +33,7 @@ migrate_working_dir/
 /android/
 /ios/
 
+
 # Symbolication related
 app.*.symbols
 

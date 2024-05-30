@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:teacher_space/bloc/auth_bloc.dart';
-import 'package:teacher_space/login_screen.dart';
 import 'package:teacher_space/student_form.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -39,12 +38,17 @@ class _HomeScreenState extends State<HomeScreen> {
             .collection('Students')
             .snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
-          if (!snapshot.hasData) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());
+          }
+          if (!snapshot.hasData ||
+              (snapshot.hasData && snapshot.data!.docs.length == 0)) {
+            return Center(
+              child: Text("Empty List"),
+            );
           }
 
           final students = snapshot.data!.docs;
-
           return ListView.builder(
             itemCount: students.length,
             itemBuilder: (context, index) {
@@ -77,10 +81,6 @@ class _HomeScreenState extends State<HomeScreen> {
         },
       );
     });
-  }
-
-  void _editStudent(DocumentSnapshot student) {
-    // Implement the edit functionality
   }
 
   @override
